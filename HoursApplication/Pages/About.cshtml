@@ -1,0 +1,24 @@
+﻿@page
+@using HoursApplication.Classes
+@model HoursApplication.Pages.AboutModel
+@{
+}
+
+<div class="alert alert-primary" role="alert">
+    <h1 class="fs-5">@Model.Message</h1>
+</div>
+
+<div class="row">
+    <div class="col-auto text-end fw-bold" style="width: 6.5em">Start time: </div>
+    <div class="col">@Model.StartTime.FormatAmPm()</div>
+</div>
+
+<div class="row">
+    <div class="col-auto text-end fw-bold" style="width: 6.5em">End time: </div>
+    <div class="col">@Model.EndTime.FormatAmPm()</div>
+</div>
+
+<div class="row">
+    <div class="col-auto text-end fw-bold" style="width: 6.5em">Worked: </div>
+    <div class="col">@Model.Worked</div>
+</div>

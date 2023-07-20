@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoursApplication", "HoursApplication\HoursApplication.csproj", "{511E2A34-5280-4985-964C-0145EDA0C2F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DropdownEumRazorPages", "DropdownEumRazorPages\DropdownEumRazorPages.csproj", "{FDDA2E5B-25E0-4892-A7E9-2B77EF4B0FB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F03795FD-C6DB-48AD-8DA2-B57C4632C078}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{511E2A34-5280-4985-964C-0145EDA0C2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511E2A34-5280-4985-964C-0145EDA0C2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511E2A34-5280-4985-964C-0145EDA0C2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511E2A34-5280-4985-964C-0145EDA0C2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDA2E5B-25E0-4892-A7E9-2B77EF4B0FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDA2E5B-25E0-4892-A7E9-2B77EF4B0FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDA2E5B-25E0-4892-A7E9-2B77EF4B0FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDA2E5B-25E0-4892-A7E9-2B77EF4B0FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F200173B-B543-42B1-A76B-B60647C471BA}
+	EndGlobalSection
+EndGlobal

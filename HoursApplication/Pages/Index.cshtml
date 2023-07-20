@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    
+}
+
+<div class="container">
+
+    <div class="alert alert-primary shadow mt-2 mb-4" role="alert">
+        <h1 class="fs-6 text-center">Working with Dropdown list</h1>
+    </div>
+
+    <form id="main" method="post" class="border border-light-subtle shadow" style="width: 20.5em">
+        
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="row g-3 align-items-center mb-2 mt-1">
+
+            <div class="col-3 text-end ms-1">
+                <label for="startHours">Start time</label>
+            </div>
+
+            <div class="col me-2">
+
+                <select name="StartTime"
+                        id="startHours"
+                        class="form-select"
+                        asp-for="@Model.Container.StartTime"
+                        asp-items="@Model.StartHoursList">
+                </select>
+
+                <span asp-validation-for="Container.StartTime" class="text-danger"></span>
+            </div>
+
+        </div>
+        
+        <div class="row g-3 align-items-center">
+
+            <div class="col-3 text-end ms-1">
+                <label for="endHours">End time</label>
+            </div>
+
+            <div class="col me-2">
+
+                <select name="EndTime"
+                        id="endHours"
+                        class="form-select"
+                        asp-for="@Model.Container.EndTime"
+                        asp-items="@Model.EndHoursList">
+                </select>
+
+                <span asp-validation-for="Container.EndTime" class="text-danger"></span>
+            </div>
+
+        </div>
+        
+        <div class="row g-3">
+
+            <div class="col">
+                <input type="submit"
+                       value="Save"
+                       class="btn btn-primary btn-sm float-end me-2 mb-2 mt-2"/>
+            </div>
+
+        </div>
+        
+    </form>
+</div>
+
+

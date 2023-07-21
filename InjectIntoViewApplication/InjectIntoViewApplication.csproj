@@ -12,10 +12,12 @@
 
 	<ItemGroup>
 	  <None Remove="readme.md" />
+	  <None Remove="Scripts\Select.sql" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="readme.md" />
+	  <Content Include="Scripts\Select.sql" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
@@ -25,6 +27,5 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="assets\" />
-	  <Folder Include="Scripts\" />
 	</ItemGroup>
 </Project>

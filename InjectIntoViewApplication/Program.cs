@@ -1,4 +1,6 @@
 using InjectIntoViewApplication.Classes;
+using InjectIntoViewApplication.Interfaces;
+using InjectIntoViewApplication.Models;
 
 namespace InjectIntoViewApplication;
 public class Program

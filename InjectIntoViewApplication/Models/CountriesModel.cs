@@ -1,18 +1,11 @@
 ﻿using InjectIntoViewApplication.Data;
-using InjectIntoViewApplication.Models;
+using InjectIntoViewApplication.Interfaces;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 #pragma warning disable CS8618
 
-namespace InjectIntoViewApplication.Classes;
+namespace InjectIntoViewApplication.Models;
 
-public interface ICountryService
-{
-    public List<SelectListItem> Countries { get; set; }
-    public string Name { get; set; }
-    public string Iso { get; set; }
-    public Countries GetCountryByIso(string iso);
-}
 public class CountriesModel : ICountryService
 {
     public List<SelectListItem> Countries { get; set; }

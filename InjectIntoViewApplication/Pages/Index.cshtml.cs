@@ -1,4 +1,4 @@
-﻿using InjectIntoViewApplication.Classes;
+﻿using InjectIntoViewApplication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;

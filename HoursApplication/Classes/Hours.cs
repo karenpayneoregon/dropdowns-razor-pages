@@ -44,6 +44,11 @@ public class Hours
             }
         }
 
+        for (int index = 0; index < hoursList.Count; index++)
+        {
+            hoursList[index].Id = index;
+        }
+
         return hoursList;
 
     }

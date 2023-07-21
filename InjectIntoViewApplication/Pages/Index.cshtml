@@ -1,0 +1,68 @@
+﻿@page
+@inject ICountryService CountriesModel
+@using InjectIntoViewApplication.Classes
+@model IndexModel
+@{
+    ViewData["Title"] = "Code sample";
+}
+
+<div class="container">
+
+    <div class="alert alert-primary" role="alert">
+        <h1 class="fs-5">See console for on post</h1>
+    </div>
+
+    <form method="post">
+
+        @*<input id="countyCode1" type="hidden" asp-for="CountryCode1"/>*@
+
+        <div class="row g-3 align-items-center mb-2 mt-1">
+            <div class="col-3 text-end ms-1">
+                @* ReSharper disable once Html.IdNotResolved *@
+                <label for="countries">Countries:</label>
+            </div>
+            <div class="col me-2">
+                @* Injected *@
+                @Html.DropDownListFor(model => 
+                    model.CountryCode1, 
+                    Model.CountryList,
+                 new {
+                        @class = "form-select",
+                        style = "width:18.5em;",
+                        id = "countries"
+                    })
+            </div>
+        </div>
+
+        <div class="row g-3 align-items-center mb-2 mt-1">
+
+            <div class="col-3 text-end ms-1">
+                <label for="countryId">Countries:</label>
+            </div>
+
+            <div class="col me-2">
+                @* Not injected *@
+                <select name="CountryCode2"
+                        id="countryId"
+                        class="form-select"
+                        style="width: 18.5em;"
+                        asp-for="@Model.CountryCode2"
+                        asp-items="@Model.CountryList">
+                </select>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="submit" id="postForm" class="btn btn-primary float-end me-2" />
+            </div>
+        </div>
+        
+
+    </form>
+
+
+</div>
+

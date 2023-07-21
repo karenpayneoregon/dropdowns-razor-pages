@@ -1,4 +1,5 @@
-﻿namespace HoursApplication.Models;
+﻿#pragma warning disable CS8618
+namespace HoursApplication.Models;
 
 public class HourItem
 {

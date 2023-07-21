@@ -1,6 +1,12 @@
 # About
 
-Contains two projects for showing how to use a select/DropDown with Razor Pages.
+Contains three projects for showing how to use a select/DropDown with Razor Pages.
+
+![Figure1](HoursApplication/assets/figure1.png)
+
+![Figure1](InjectIntoViewApplication/assets/figure1.png)
+
+![Title](DropdownEumRazorPages/assets/Title.png)
 
 ## Requires
 

@@ -1,6 +1,7 @@
 ﻿using InjectIntoViewApplication.Data;
 using InjectIntoViewApplication.Interfaces;
 using Microsoft.AspNetCore.Mvc.Rendering;
+#pragma warning disable CS8603
 
 #pragma warning disable CS8618
 
@@ -19,11 +20,11 @@ public class CountriesModel : ICountryService
         var connectionString = Configuration.GetConnectionString("CountriesConnection");
         using var context = new Context(connectionString);
 
-        Countries = context.Countries.Select(a =>
+        Countries = context.Countries.Select(c =>
             new SelectListItem
             {
-                Value = a.Iso,
-                Text = a.Name
+                Value = c.Iso,
+                Text = c.Name
             }).ToList();
     }
 

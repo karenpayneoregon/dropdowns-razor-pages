@@ -2,27 +2,22 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using InjectIntoViewApplication.Classes;
 using InjectIntoViewApplication.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace InjectIntoViewApplication.Data;
 
 public partial class Context : DbContext
 {
-
-
     public Context()
     {
     }
-
+    private string ConnectionString { get; set; }
     public Context(string connectionString)
     {
         ConnectionString = connectionString;
     }
 
-    private string ConnectionString { get; set; }
 
     public Context(DbContextOptions<Context> options)
         : base(options)
@@ -30,6 +25,10 @@ public partial class Context : DbContext
     }
 
     public virtual DbSet<Countries> Countries { get; set; }
+
+    public virtual DbSet<Gender> Gender { get; set; }
+
+    public virtual DbSet<StateLookup> StateLookup { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(ConnectionString);
@@ -50,6 +49,20 @@ public partial class Context : DbContext
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(80)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<StateLookup>(entity =>
+        {
+            entity.HasNoKey();
+
+            entity.Property(e => e.StateAbbrev)
+                .HasMaxLength(2)
+                .IsUnicode(false)
+                .IsFixedLength();
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.StateName)
+                .HasMaxLength(32)
                 .IsUnicode(false);
         });
 

@@ -1,6 +1,6 @@
 ﻿{
    "CodeGenerationMode": 3,
-   "ContextClassName": "UtlityDatabaseContext",
+   "ContextClassName": "Context",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
    "FilterSchemas": false,
@@ -16,6 +16,14 @@
    "Tables": [
       {
          "Name": "[dbo].[Countries]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Gender]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[StateLookup]",
          "ObjectType": 0
       }
    ],

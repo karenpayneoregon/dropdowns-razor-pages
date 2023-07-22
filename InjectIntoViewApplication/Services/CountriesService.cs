@@ -1,19 +1,20 @@
 ﻿using InjectIntoViewApplication.Data;
 using InjectIntoViewApplication.Interfaces;
+using InjectIntoViewApplication.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 #pragma warning disable CS8603
 
 #pragma warning disable CS8618
 
-namespace InjectIntoViewApplication.Models;
+namespace InjectIntoViewApplication.Services;
 
-public class CountriesModel : ICountryService
+public class CountriesService : ICountry
 {
     public List<SelectListItem> Countries { get; set; }
     public string Name { get; set; }
     public string Iso { get; set; }
     public IConfiguration Configuration { get; }
-    public CountriesModel(IConfiguration configuration)
+    public CountriesService(IConfiguration configuration)
     {
         Configuration = configuration;
 
@@ -36,7 +37,5 @@ public class CountriesModel : ICountryService
         var connectionString = Configuration.GetConnectionString("CountriesConnection");
         using var context = new Context(connectionString);
         return context.Countries.FirstOrDefault(x => x.Iso == iso);
-
-
     }
 }

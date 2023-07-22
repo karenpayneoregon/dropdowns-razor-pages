@@ -8,14 +8,14 @@ using Serilog;
 namespace InjectIntoViewApplication.Pages;
 public class IndexModel : PageModel
 {
-    public readonly ICountryService CountryService;
+    public readonly ICountry CountryService;
     public List<SelectListItem> CountryList { get; set; }
     [BindProperty]
     public string CountryCode1 { get; set; }
     [BindProperty]
     public string CountryCode2 { get; set; }
 
-    public IndexModel(ICountryService countryService)
+    public IndexModel(ICountry countryService)
     {
         CountryService = countryService;
         CountryList = countryService.Countries;

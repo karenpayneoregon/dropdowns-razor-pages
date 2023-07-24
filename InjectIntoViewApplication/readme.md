@@ -111,3 +111,9 @@ public class IndexModel : PageModel
     }
 }
 ```
+
+## Index1 page
+
+This page does not use view injection and kept the interfaces separate from Index page.
+
+![Figure2](assets/figure2.png)

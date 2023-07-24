@@ -18,7 +18,7 @@ public class CountriesService : ICountry
     {
         Configuration = configuration;
 
-        var connectionString = Configuration.GetConnectionString("CountriesConnection");
+        var connectionString = Configuration.GetConnectionString("ReferencesConnection");
         using var context = new Context(connectionString);
 
         Countries = context.Countries.Select(c =>
@@ -34,7 +34,7 @@ public class CountriesService : ICountry
     /// </summary>
     public Countries GetCountryByIso(string iso)
     {
-        var connectionString = Configuration.GetConnectionString("CountriesConnection");
+        var connectionString = Configuration.GetConnectionString("ReferencesConnection");
         using var context = new Context(connectionString);
         return context.Countries.FirstOrDefault(x => x.Iso == iso);
     }

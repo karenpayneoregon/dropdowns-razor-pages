@@ -11,7 +11,10 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddRazorPages();
+        
         builder.Services.AddScoped<ICountry, CountriesService>();
+        builder.Services.AddSingleton<IReferencesService, ReferencesService>();
+
         SetupLogging.Development();
 
         var app = builder.Build();

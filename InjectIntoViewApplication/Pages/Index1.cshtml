@@ -2,3 +2,49 @@
 @model InjectIntoViewApplication.Pages.Index1Model
 @{
 }
+
+@*
+    Nothing injected, saw a stock Microsoft example and had to create mine
+    https://learn.microsoft.com/en-us/aspnet/core/mvc/views/dependency-injection?view=aspnetcore-7.0#populating-lookup-data
+*@
+
+<div class="alert alert-primary" role="alert">
+    <h1 class="fs-5">Simple form</h1>
+</div>
+<form method="post" class="w-25">
+
+    <div class="mb-3">
+        <label for="firstName" class="form-label">First name</label>
+        <input type="text" asp-for="Person.FirstName" class="form-control" id="firstName">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Last name</label>
+        <input type="text" asp-for="Person.LastName" class="form-control" id="lastName">
+    </div>
+
+    <div class="mb-3">
+        <label for="genderId" class="form-label">Gender</label>
+        <select name="GenderIdentifier"
+                id="genderId"
+                class="form-select"
+                style="width: 18.5em;"
+                asp-for="Person.Gender"
+                asp-items="@Model.GenderList">
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="stateId" class="form-label">State</label>
+        <select name="StateIdentifier"
+                id="stateId"
+                class="form-select"
+                style="width: 18.5em;"
+                asp-for="Person.State"
+                asp-items="@Model.StatesList">
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

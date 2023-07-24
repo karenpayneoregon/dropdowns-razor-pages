@@ -14,6 +14,8 @@ public interface ICountry
 
 public interface IReferencesService
 {
+    public List<SelectListItem> Genders { get; set; }
+    public List<SelectListItem> States { get; set; }
     public List<StateLookup> GetStates();
     public List<Gender> GetGenders();
 }

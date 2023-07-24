@@ -13,6 +13,7 @@ public class Program
         builder.Services.AddRazorPages();
         
         builder.Services.AddScoped<ICountry, CountriesService>();
+        builder.Services.AddSingleton<IDataService, DataService>();
         builder.Services.AddSingleton<IReferencesService, ReferencesService>();
 
         SetupLogging.Development();

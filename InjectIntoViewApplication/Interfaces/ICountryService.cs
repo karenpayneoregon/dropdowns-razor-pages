@@ -11,11 +11,3 @@ public interface ICountry
     public string Iso { get; set; }
     public Countries GetCountryByIso(string iso);
 }
-
-public interface IReferencesService
-{
-    public List<SelectListItem> Genders { get; set; }
-    public List<SelectListItem> States { get; set; }
-    public List<StateLookup> GetStates();
-    public List<Gender> GetGenders();
-}

@@ -12,6 +12,7 @@ namespace InjectIntoViewApplication.Pages
     public class Index1Model : PageModel
     {
         public readonly IReferencesService ReferencesService;
+        public readonly IDataService DataService;
         public List<SelectListItem> GenderList { get; set; }
         public List<SelectListItem> StatesList { get; set; }
         [BindProperty]
@@ -24,9 +25,10 @@ namespace InjectIntoViewApplication.Pages
         [BindProperty]
         public int StateIdentifier { get; set; }
 
-        public Index1Model(IReferencesService referencesService)
+        public Index1Model(IReferencesService referencesService, IDataService dataService)
         {
             ReferencesService = referencesService;
+            DataService = dataService;
             GenderList = ReferencesService.Genders;
             StatesList = ReferencesService.States;
             Person = new Person();
@@ -39,8 +41,8 @@ namespace InjectIntoViewApplication.Pages
         public RedirectToPageResult OnPost()
         {
             
-            Person.Gender = ReferencesService.GetGenders().FirstOrDefault(x => x.Id == GenderIdentifier)!;
-            Person.State = ReferencesService.GetStates().FirstOrDefault(x => x.Id == StateIdentifier)!;
+            Person.Gender = DataService.GetGenders().FirstOrDefault(x => x.Id == GenderIdentifier)!;
+            Person.State = DataService.GetStates().FirstOrDefault(x => x.Id == StateIdentifier)!;
             Log.Information("First name '{P1}' Last name {P2} Gender {P3} State {P4}", 
                 Person.FirstName, 
                 Person.LastName, 

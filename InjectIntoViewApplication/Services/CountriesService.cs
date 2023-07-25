@@ -2,6 +2,8 @@
 using InjectIntoViewApplication.Interfaces;
 using InjectIntoViewApplication.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+
 #pragma warning disable CS8603
 
 #pragma warning disable CS8618
@@ -21,12 +23,17 @@ public class CountriesService : ICountry
         var connectionString = Configuration.GetConnectionString("ReferencesConnection");
         using var context = new Context(connectionString);
 
-        Countries = context.Countries.Select(c =>
+        Countries = context.Countries.AsNoTracking().Select(c =>
             new SelectListItem
             {
                 Value = c.Iso,
                 Text = c.Name
             }).ToList();
+
+        // optional 
+        Countries.Insert(0,new SelectListItem("Select","0"));
+        Countries[0].Disabled = true;
+
     }
 
     /// <summary>

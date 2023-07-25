@@ -18,7 +18,8 @@ public class ReferencesService : IReferencesService
             new SelectListItem
             {
                 Value = g.Id.ToString(),
-                Text = g.Type
+                Text = g.Type,
+                Selected = g.Id == 2
             }).ToList();
 
         States = DataService.GetStates().Select(sl =>

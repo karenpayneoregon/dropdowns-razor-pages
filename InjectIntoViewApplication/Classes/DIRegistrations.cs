@@ -3,6 +3,7 @@ using InjectIntoViewApplication.Services;
 
 namespace InjectIntoViewApplication.Classes;
 
+
 public static class DIRegistrations
 {
     public static IServiceCollection RegisterServicesLogic(this IServiceCollection services)

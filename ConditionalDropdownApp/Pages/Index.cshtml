@@ -1,0 +1,50 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+
+    <div class="alert alert-light" role="alert">
+        <h1 class="fs-5">Set selected code sample</h1>
+    </div>
+
+    <form method="post" style="width: 20em;" role="main">
+
+        <fieldset class="border border-secondary-subtle rounded-3 p-3">
+
+            <legend class="float-none w-auto fs-6"></legend>
+
+            <label for="colors">Select a color</label>
+            <select style="width: 18em;" asp-for="Priority" class="form-select" id="colors">
+                <option></option>
+                <option selected="@(Model.Priority == "Green")" style="color: green" value="Green">Green</option>
+                <option selected="@(Model.Priority == "Amber")" style="color: orange" value="Amber">Amber</option>
+                <option selected="@(Model.Priority == "Red")" style="color: red" value="Red">Red</option>
+            </select>
+
+        </fieldset>
+
+        <div class="row mt-3">
+
+            <div class="col">
+                <input type="submit"
+                       value="Get selected"
+                       class="btn btn-primary"
+                       style="width: 20em;"
+                       asp-page-handler="GetSelectedPriority"/>
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col">
+                @Html.Raw(Model.Message)
+            </div>
+
+        </div>
+
+    </form>
+</div>

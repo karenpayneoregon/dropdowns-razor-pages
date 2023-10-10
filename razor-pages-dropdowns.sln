@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkLibrary", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColumnSortApplication", "ColumnSortApplication\ColumnSortApplication.csproj", "{4881DBAD-9371-4984-B399-04D1DABA417C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalDropdownApp", "ConditionalDropdownApp\ConditionalDropdownApp.csproj", "{A79EB566-8840-4E27-818F-A0729D45415A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{4881DBAD-9371-4984-B399-04D1DABA417C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4881DBAD-9371-4984-B399-04D1DABA417C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4881DBAD-9371-4984-B399-04D1DABA417C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79EB566-8840-4E27-818F-A0729D45415A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79EB566-8840-4E27-818F-A0729D45415A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79EB566-8840-4E27-818F-A0729D45415A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79EB566-8840-4E27-818F-A0729D45415A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

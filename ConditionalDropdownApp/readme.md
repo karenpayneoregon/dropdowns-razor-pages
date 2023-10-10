@@ -18,6 +18,31 @@ OnPost if **Priority** is null a message is presented indicating nothing was sel
 
 Of course for a real application there would be validation against the Model for the Page and handled accordingly.
 
+## Random select
+
+Given a list of colors
+
+```csharp
+public class StaticData
+{
+    public static List<string> Colors 
+        => new() { "","Green", "Amber", "Red" };
+}
+```
+
+We can use `Random.Shared.Next()` to get a random color.
+
+```csharp
+public void OnGet()
+{
+    Priority = StaticData
+        .Colors
+        .OrderBy(x => Random.Shared.Next())
+        .ToList()
+        .FirstOrDefault();
+}
+```
+
 ## Accessibility
 
 :small_orange_diamond: Index page is WCAG AA compliant

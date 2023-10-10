@@ -3,7 +3,9 @@
 public static class Extensions
 {
     private static Random _rng = new();
-
+    /// <summary>
+    /// For prior to .NET 7
+    /// </summary>
     public static void Shuffle<T>(this IList<T> list)
     {
         int value = list.Count;

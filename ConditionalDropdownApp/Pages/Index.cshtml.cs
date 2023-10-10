@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ConditionalDropdownApp.Classes;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Serilog;
 
@@ -7,13 +8,17 @@ public class IndexModel : PageModel
 {
     public void OnGet()
     {
-        Priority = "Amber";
+        Colors = StaticData.Colors;
+        Colors.Shuffle();
+        Priority = Colors.FirstOrDefault();
     }
 
     [BindProperty]
     public string Priority { get; set; }
     [BindProperty]
     public string Message { get; set; }
+    [BindProperty]
+    public List<string> Colors { get; set; }
 
     public IActionResult OnPostGetSelectedPriority(IFormCollection data)
     {

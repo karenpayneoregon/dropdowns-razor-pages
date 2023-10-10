@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NorthWindExampleApp4.Data;
-using NorthWindExampleApp4.Models;
 using System;
 using System.Collections.Generic;
+using ColumnSortApplication.Models;
 
 namespace NorthWindExampleApp4.Data.Configurations
 {

@@ -1,4 +1,5 @@
 ﻿using ColumnSortApplication.Classes;
+using ColumnSortApplication.Data;
 using ColumnSortApplication.Models;
 using EntityFrameworkLibrary;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NorthWindExampleApp4.Data;
-using NorthWindExampleApp4.Models;
 
 namespace ColumnSortApplication.Pages
 {

@@ -9,9 +9,6 @@ namespace ColumnSortApplication.Classes;
 public static class EntityExtensions
 {
 
-
-
-
     /// <summary>
     /// Get details for a model
     /// </summary>

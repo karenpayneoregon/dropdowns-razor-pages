@@ -7,6 +7,7 @@ public class IndexModel : PageModel
 {
     public void OnGet()
     {
+        // select a random color or empty string
         Priority = StaticData
             .Colors
             .OrderBy(x => Random.Shared.Next())
@@ -14,8 +15,15 @@ public class IndexModel : PageModel
             .FirstOrDefault();
     }
 
+    /// <summary>
+    /// Property for select element
+    /// </summary>
     [BindProperty]
     public string Priority { get; set; }
+
+    /// <summary>
+    /// Property display selection on post
+    /// </summary>
     [BindProperty]
     public string Message { get; set; }
 

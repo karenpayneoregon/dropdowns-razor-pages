@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkLibrary", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColumnSortApplication", "ColumnSortApplication\ColumnSortApplication.csproj", "{4881DBAD-9371-4984-B399-04D1DABA417C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalDropdownApp", "ConditionalDropdownApp\ConditionalDropdownApp.csproj", "{A79EB566-8840-4E27-818F-A0729D45415A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalDropdownApp", "ConditionalDropdownApp\ConditionalDropdownApp.csproj", "{A79EB566-8840-4E27-818F-A0729D45415A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
